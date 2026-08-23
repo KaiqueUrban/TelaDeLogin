@@ -19,7 +19,7 @@ Interface de login desenvolvida com HTML5 e CSS3, com foco em estrutura semânti
 ## Como executar
 
 ```bash
-git clone https://github.com/seu-usuario/tela-login.git
+git clone git clone https://github.com/KaiqueUrban/TeladeLogin.git
 ```
 
 Abra o arquivo `telaDeLogin.html` no navegador, ou utilize a extensão **Live Server** (VSCode) para uma melhor experiência de desenvolvimento.
