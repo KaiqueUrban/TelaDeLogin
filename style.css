@@ -1,11 +1,15 @@
 body {
-  height: 100vh;
+  height: 100vh; /* Medida utilizada para que a background-image ocupe toda a altura da página de acordo com dispositivo utilizado */
   background-image: url("Imagens/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  color: white; /* Cor utilizada para trazer bom contraste com o fundo escuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   a {
+    /* Estilização de links realizada dentro do body para sobrepor a regra padrão do navegador */
     color: white;
     text-decoration: none;
   }
@@ -13,16 +17,10 @@ body {
 
 form {
   width: 300px;
-  height: 250px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  padding: 15px;
   margin: auto;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /*Utilizado para criar um efeito de transparência no fundo do formulário, permitindo que a imagem de background seja parcialmente visível */
 }
 
 h1 {
@@ -43,29 +41,28 @@ label {
 input {
   width: 200px;
   height: 15px;
-  border-radius: 5px;
-  border: solid 3px #ff2400;
-  padding: 5px;
   margin: 5px 0 5px 0;
+  padding: 5px;
+  border: solid 3px #ff2400; /* Cor utilizada para combinar com as cores da imagem de background */
+  border-radius: 5px;
 }
 
 button {
   width: 100%;
   height: 27px;
-  border-radius: 5px;
+  margin: 25px 0 10px 0;
   border: none;
+  border-radius: 5px;
   background-color: #ff2400;
   font-size: 13px;
   cursor: pointer;
   color: white;
-  margin-top: 25px;
-  margin-bottom: 10px;
 }
 
 .links {
   font-size: 13px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Alinhamento dos links de forma que fiquem nas extremidades do container */
   a:hover {
     text-decoration: underline;
     cursor: pointer;
@@ -73,27 +70,25 @@ button {
   }
 }
 
+/* Media queries utilizando-se de 3 breakpoints permitindo responsividade em tamanhos de tela variados */
+
 @media (max-width: 1024px) {
   form {
-    width: 60%;
-    height: 35%;
+    width: 40%;
     padding: 10px;
-   }
-
+  }
 }
 
 @media (max-width: 768px) {
   form {
-    width: 50%;
-    height: 65%;
+    width: 60%;
     padding: 10px;
-   }
+  }
 }
 
 @media (max-width: 480px) {
   form {
-    width: 70%;
-    height: 50%;
+    width: 80%;
     padding: 10px;
-   }
+  }
 }
