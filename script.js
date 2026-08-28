@@ -53,4 +53,4 @@ function send(event) {
   alert("Login realizado com sucesso!")
 }
 
-loginButton.addEventListener("click", send);
+loginButton.addEventListener("submit", send);
