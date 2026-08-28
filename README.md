@@ -1,46 +1,56 @@
 # Tela de Login
 
-## [Ver projeto online](https://kaiqueurban.github.io/TelaDeLogin/)
+🔗 [Ver projeto online](https://kaiqueurban.github.io/TelaDeLogin/)
 
-Interface de login desenvolvida com HTML5 e CSS3, com foco em estrutura semântica, acessibilidade e boas práticas de estilização.
+Interface de login desenvolvida com HTML5, CSS3 e JavaScript, com foco em estrutura semântica, acessibilidade, responsividade e validação de formulário.
 
 ![Preview](./preview.png)
 
 ## Tecnologias
 
 - HTML5
-- CSS3 (Flexbox, Box Model)
+- CSS3 (Flexbox, Box Model, Media Queries)
+- JavaScript (DOM, Eventos, Validação de formulário)
 
 ## Funcionalidades
 
 - Formulário de login com campos de e-mail e senha
-- Validação nativa (`required`, `type="email"`)
-- Layout responsivo e centralizado
+- Validação nativa (`required`, `type="email"`) e validação customizada via JavaScript:
+  - Verificação de campos vazios
+  - Validação de formato de e-mail
+  - Senha com no mínimo 8 caracteres, uma letra maiúscula e um número
+- Layout responsivo, testado em desktop, tablet e celular
 - Efeito hover nos links de navegação
 
 ## Como executar
 
 ```bash
-git clone git clone https://github.com/KaiqueUrban/TeladeLogin.git
+git clone https://github.com/KaiqueUrban/TelaDeLogin.git
 ```
 
-Abra o arquivo `telaDeLogin.html` no navegador, ou utilize a extensão **Live Server** (VSCode) para uma melhor experiência de desenvolvimento.
+Abra o arquivo `index.html` no navegador, ou utilize a extensão **Live Server** (VSCode) para uma melhor experiência de desenvolvimento.
 
 ## Estrutura do projeto
 
 ```
-tela-login/
-├── telaDeLogin.html
+TelaDeLogin/
+├── index.html
 ├── style.css
+├── script.js
 └── Imagens/
     └── background.jpg
 ```
 
 ## Roadmap
 
-- [ ] Validação de formulário com JavaScript
-- [ ] Redirecionamento pós-login
-- [ ] Cadastro e recuperação de senha com back-end (Node.js) e banco de dados
+- [x] Estrutura HTML semântica e acessível
+- [x] Estilização com CSS (Flexbox, Box Model)
+- [x] Responsividade com Media Queries
+- [x] Validação de formulário com JavaScript
+- [ ] Feedback visual de erros (sem `alert`)
+- [ ] Botão de mostrar/ocultar senha
+- [ ] Simulação de cadastro/login com LocalStorage
+- [ ] Back-end com Node.js e banco de dados
 
 ## Autor
 
