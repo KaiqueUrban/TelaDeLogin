@@ -3,7 +3,14 @@ const loginform = document.getElementById("form");
 function send(event) {
   event.preventDefault();
   const emailInput = document.getElementById("email");
+  const emailError = document.getElementById("emailError");
   const passwordInput = document.getElementById("senha");
+  const passwordError = document.getElementById("passwordError");
+
+  emailError.textContent = "";
+  passwordError.textContent = "";
+  emailInput.classList.remove("class-error");
+  passwordInput.classList.remove("class-error");
 
   const email = emailInput.value;
   const password = passwordInput.value;
@@ -15,12 +22,14 @@ function send(event) {
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    alert("Por favor, insira um endereço de e-mail válido.");
+    emailError.textContent = "Insira um e-mail válido";
+    emailInput.classList.add("class-error");
     return;
   }
 
   if (password.length < 8) {
-    alert("A senha deve ter pelo menos 8 caracteres.");
+    passwordError.textContent = "A senha deve ter pelo menos 8 caracteres.";
+    passwordInput.classList.add("class-error")
     return;
   }
 
@@ -33,7 +42,9 @@ function send(event) {
   }
 
   if (!capitalLetter) {
-    alert("A senha deve conter pelo menos um caractere em maiúsculo.");
+    passwordError.textContent =
+      "A senha deve conter pelo menos um caractere em maiúsculo.";
+      passwordInput.classList.add("class-error")
     return;
   }
 
@@ -46,11 +57,12 @@ function send(event) {
   }
 
   if (!haveNumber) {
-    alert("A senha deve conter pelo menos um número.");
+    passwordError.textContent = "A senha deve conter pelo menos um número.";
+    passwordInput.classList.add("class-error")
     return;
   }
 
-  alert("Login realizado com sucesso!")
+  alert("Login realizado com sucesso!");
 }
 
 loginform.addEventListener("submit", send);
