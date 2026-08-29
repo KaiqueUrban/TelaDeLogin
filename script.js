@@ -1,4 +1,4 @@
-const loginButton = document.getElementById("botao");
+const loginform = document.getElementById("form");
 
 function send(event) {
   event.preventDefault();
@@ -53,4 +53,4 @@ function send(event) {
   alert("Login realizado com sucesso!")
 }
 
-loginButton.addEventListener("submit", send);
+loginform.addEventListener("submit", send);
