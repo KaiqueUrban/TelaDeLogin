@@ -77,6 +77,20 @@ button {
   color: white;
 }
 
+.eyeIcon {
+  width: auto;
+  height: auto;
+  padding: 1px 1px 1px 1px;
+  border: none;
+  border-radius: 0;
+  margin: auto;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-43%);
+  background: transparent;
+}
+
 .links {
   font-size: 13px;
   display: flex;
@@ -96,6 +110,12 @@ button {
   margin: auto;
 }
 
+.passwordContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
 /* Media queries utilizando-se de 3 breakpoints permitindo responsividade em tamanhos de tela variados */
 
 @media (max-width: 1024px) {
@@ -107,7 +127,7 @@ button {
 
 @media (max-width: 768px) {
   form {
-    width: 60%;
+    width: 50%;
     padding: 10px;
   }
 }

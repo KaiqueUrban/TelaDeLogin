@@ -3,6 +3,7 @@ const emailInput = document.getElementById("email");
 const emailError = document.getElementById("emailError");
 const passwordInput = document.getElementById("password");
 const passwordError = document.getElementById("passwordError");
+const togglePassword = document.getElementById("togglePassword");
 
 function send(event) {
   event.preventDefault();
@@ -30,7 +31,6 @@ function send(event) {
     passwordError.textContent = "Por favor, preencha este campo.";
     return;
   }
-
 
   if (password.length < 8) {
     passwordError.textContent = "A senha deve ter pelo menos 8 caracteres.";
@@ -68,6 +68,13 @@ function send(event) {
 }
 
 loginform.addEventListener("submit", send);
+togglePassword.addEventListener("click", function () {
+  if (passwordInput.type === "password") {
+    passwordInput.setAttribute("type", "text");
+  } else {
+    passwordInput.setAttribute("type", "password");
+  }
+});
 
 emailInput.addEventListener("input", function () {
   emailError.textContent = "";
