@@ -20,16 +20,17 @@ function send(event) {
     return;
   }
 
-  if (password === "") {
-    passwordError.textContent = "Por favor, preencha este campo.";
-    return;
-  }
-
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
     emailError.textContent = "Insira um e-mail válido";
     return;
   }
+
+  if (password === "") {
+    passwordError.textContent = "Por favor, preencha este campo.";
+    return;
+  }
+
 
   if (password.length < 8) {
     passwordError.textContent = "A senha deve ter pelo menos 8 caracteres.";
