@@ -15,10 +15,12 @@ Interface de login desenvolvida com HTML5, CSS3 e JavaScript, com foco em estrut
 ## Funcionalidades
 
 - Formulário de login com campos de e-mail e senha
-- Validação nativa (`required`, `type="email"`) e validação customizada via JavaScript:
+- Validação customizada em JavaScript, com feedback visual em tempo real (sem `alert`):
   - Verificação de campos vazios
   - Validação de formato de e-mail
   - Senha com no mínimo 8 caracteres, uma letra maiúscula e um número
+- Botão de mostrar/ocultar senha
+- Atributos de acessibilidade (`autocomplete`, `label`/`for` corretamente associados)
 - Layout responsivo, testado em desktop, tablet e celular
 - Efeito hover nos links de navegação
 
@@ -37,6 +39,9 @@ TelaDeLogin/
 ├── index.html
 ├── style.css
 ├── script.js
+├── preview.png
+├── Icones/
+│   └── eye.svg
 └── Imagens/
     └── background.jpg
 ```
@@ -47,8 +52,10 @@ TelaDeLogin/
 - [x] Estilização com CSS (Flexbox, Box Model)
 - [x] Responsividade com Media Queries
 - [x] Validação de formulário com JavaScript
-- [ ] Feedback visual de erros (sem `alert`)
-- [ ] Botão de mostrar/ocultar senha
+- [x] Feedback visual de erros (sem `alert`)
+- [x] Botão de mostrar/ocultar senha
+- [ ] Transições suaves nas mensagens de erro
+- [ ] Loading no botão de envio
 - [ ] Simulação de cadastro/login com LocalStorage
 - [ ] Back-end com Node.js e banco de dados
 
